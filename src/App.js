@@ -1,11 +1,12 @@
 import './App.css';
 import Layout from './lib/layout';
+import Homepage from './lib/pages/homepage';
 
 const App = () => {
   return (
     <div>
       <Layout>
-        <p>asdasd</p>
+        <Homepage />
       </Layout>
     </div>
   );

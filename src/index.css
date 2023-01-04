@@ -5,3 +5,7 @@
 .mobile-nav {
   height: 60px;
 }
+
+.footer {
+  min-height: 654px;
+}
