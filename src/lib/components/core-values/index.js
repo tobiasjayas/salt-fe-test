@@ -21,7 +21,7 @@ const CoreValue = () => {
 
   return (
     <div className="bg-broken-white pt-14">
-      <div className="lg:container lg:mx-auto lg:flex lg:items-center">
+      <div className="container mx-auto lg:flex lg:items-center">
         <div className="px-6">
           <h1 className="text-blue-title text-center lg:text-start">
             Our Core Values
@@ -43,13 +43,13 @@ const CoreValue = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-end">
-          <img
-            src="assets/core-value-mobile.png"
-            alt="core-value"
-            className="mt-7 block lg:hidden"
-          />
-        </div>
+      </div>
+      <div className="flex justify-end">
+        <img
+          src="assets/core-value-mobile.png"
+          alt="core-value"
+          className="mt-7 block lg:hidden"
+        />
       </div>
       <div className="flex justify-center">
         <img
