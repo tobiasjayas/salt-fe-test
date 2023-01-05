@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation, FreeMode } from 'swiper'
+import { Pagination, FreeMode } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -20,7 +20,7 @@ const Carousel = () => {
           loop={true}
           pagination={{
             el: '.my-custom-pagination-div-carousel',
-            renderBullet: (index, className) => {
+            renderBullet: (className) => {
               return `<span class="${className}"></span>`
             },
             clickable: true,

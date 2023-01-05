@@ -38,10 +38,9 @@ const CoreValue = () => {
         </div>
         <div className="mt-8 px-4 flex flex-col gap-y-6 lg:border-l-gray-500 lg:border-l">
           {data.map((d) => (
-            <SubtitleCard
-              title={d.title}
-              text={d.text}
-            />
+            <div key={d.title}>
+              <SubtitleCard title={d.title} text={d.text} />
+            </div>
           ))}
         </div>
         <div className="flex justify-end">
