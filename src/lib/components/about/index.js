@@ -11,7 +11,7 @@ const About = () => {
   const [swiper, setSwiper] = useState();
 
   return (
-    <div className="p-8">
+    <div className="mt-40 lg:mt-0 p-8 lg:py-12 container mx-auto">
       <Swiper
         // pagination={{
         //   type: 'fraction',

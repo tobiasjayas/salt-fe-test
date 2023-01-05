@@ -1,5 +1,5 @@
-import MobileNav from './mobileNav';
-import Footer from './footer';
+import MobileNav from './mobileNav'
+import Footer from './footer'
 
 const Layout = ({ children }) => {
   return (

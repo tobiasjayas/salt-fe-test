@@ -2,7 +2,7 @@ import { MdMenu } from 'react-icons/md'
 
 const MobileNav = () => {
   return (
-    <div className="mobile-nav flex px-6 py-4 justify-between z-50 relative bg-white">
+    <div className="mobile-nav flex px-6 py-4 justify-between z-50 relative bg-white items-center">
       <a href="/">
         <img className="h-8" src="logo-company.png" alt="logo" />
       </a>
