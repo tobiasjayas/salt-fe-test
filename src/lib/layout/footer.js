@@ -6,11 +6,10 @@ const Footer = () => {
         <div className="w-full lg:flex lg:gap-x-9">
           <div>
             <div className="mt-8 bg-white p-6">
-              <select className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600">
-                <option>ReactJS Dropdown</option>
-                <option>Laravel 9 with React</option>
-                <option>React with Tailwind CSS</option>
-                <option>React With Headless UI</option>
+              <select className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none focus:border-indigo-600">
+                <option>TECHNOLOGY DEPARTMENT</option>
+                <option>FINANCE DEPARTMENT</option>
+                <option>DATA DEPARTMENT</option>
               </select>
 
               <p className="mt-8 text-blue-text">
