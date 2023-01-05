@@ -24,12 +24,19 @@ const Carousel = () => {
   ]
 
   return (
-    <div className="mt-7 px-3">
-      <div className="h-52 flex w-full justify-center pt-8">
+    <div className="mt-7">
+      <div className="flex w-full justify-center">
         <Swiper
           autoHeight={true}
-          slidesPerView={3}
-          spaceBetween={40}
+          breakpoints={{
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+          loopedSlides={data.length}
+          slidesPerView={2}
+          spaceBetween={60}
           centeredSlides={true}
           loop={true}
           pagination={{
@@ -41,27 +48,25 @@ const Carousel = () => {
             setSwiper(s)
           }}
           modules={[Pagination]}
-          className="mySwiper linear-gradient"
+          className="coreSwiper linear-gradient"
         >
           {data.map((d) => (
             <SwiperSlide key={d.text}>
               {({ isActive }) => (
-                <>
-                  <img
-                    src={d.src}
-                    alt={d.text}
-                    className={'object-contain' + isActive ? 'scale-125' : ''}
-                  />
-                  <div className="pt-4 text-center text-sm text-grey-text-dark leading-4 font-medium">
+                <div className={isActive ? '-top-3 md:-top-5 lg:-top-8 relative' : ''}>
+                  <div className="flex justify-center">
+                    <img src={d.src} alt={d.text} />
+                  </div>
+                  <div className="pt-2 text-center text-sm text-grey-text-dark leading-4 font-medium whitespace-nowrap">
                     {isActive ? d.text : ''}
                   </div>
-                </>
+                </div>
               )}
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-      <p className="text-sm text-grey-p-light font-light leading-6">
+      <p className="mt-2 text-sm text-grey-p-light font-light leading-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod
         libero vel leo auctor, in venenatis nulla consequat. Sed commodo nunc
         sit amet congue aliquam.
