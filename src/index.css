@@ -22,6 +22,12 @@ h3 {
   line-height: 38px;
 }
 
+h4 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 38px;
+}
+
 .core-value {
   background-image: url("/public/assets/core-value.png");
   background-repeat: no-repeat;
