@@ -44,8 +44,6 @@ const About = () => {
     }
   }, [isDesktop, data.length])
 
-  console.log(render)
-
   return (
     <div className="mt-40 lg:mt-0 p-8 lg:py-12 container mx-auto">
       <Swiper

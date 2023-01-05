@@ -1,76 +1,64 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, FreeMode } from 'swiper'
+import { Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { useState } from 'react'
 import { MdEast, MdWest } from 'react-icons/md'
-// import './style.css'
 
 const Carousel = () => {
   const [swiper, setSwiper] = useState()
+  const data = [
+    {
+      src: '/assets/accesories.png',
+      text: 'Accesories',
+    },
+    {
+      src: '/assets/speed-improvement.png',
+      text: 'Speed Improvment',
+    },
+    {
+      src: '/assets/exhaust.png',
+      text: 'Exhaust',
+    },
+  ]
 
   return (
     <div className="mt-7 px-3">
       <div className="h-52 flex w-full justify-center pt-8">
         <Swiper
+          autoHeight={true}
           slidesPerView={3}
           spaceBetween={40}
           centeredSlides={true}
           loop={true}
           pagination={{
+            type: 'bullets',
             el: '.my-custom-pagination-div-carousel',
-            renderBullet: (className) => {
-              return `<span class="${className}"></span>`
-            },
             clickable: true,
           }}
           onSwiper={(s) => {
             setSwiper(s)
           }}
-          modules={[FreeMode, Pagination]}
+          modules={[Pagination]}
           className="mySwiper linear-gradient"
         >
-          <SwiperSlide>
-            {({ isActive }) => (
-              <>
-                <img
-                  src="/assets/accesories.png"
-                  alt="accesories"
-                  className={'w-32'+isActive ? 'relative scale-125' : ''}
-                />
-                <div className="pt-4 text-center text-sm text-grey-text-dark leading-4 font-medium">
-                  {isActive ? 'Accesories' : ''}
-                </div>
-              </>
-            )}
-          </SwiperSlide>
-          <SwiperSlide>
-            {({ isActive }) => (
-              <>
-                <img
-                  src="/assets/speed-improvement.png"
-                  alt="speed-improvement"
-                  className={isActive ? 'relative scale-125' : ''}
-                />
-
-                <div className="pt-4 text-center text-sm text-grey-text-dark leading-4 font-medium">{isActive ? 'Speed Improvment' : ''}</div>
-              </>
-            )}
-          </SwiperSlide>
-          <SwiperSlide>
-            {({ isActive }) => (
-              <>
-                <img
-                  src="/assets/exhaust.png"
-                  alt="exhaust"
-                  className={isActive ? 'relative scale-125' : ''}
-                />
-
-                <div className="pt-4 text-center text-sm text-grey-text-dark leading-4 font-medium">{isActive ? 'Exhaust' : ''}</div>
-              </>
-            )}
-          </SwiperSlide>
+          {data.map((d) => (
+            <SwiperSlide key={d.text}>
+              {({ isActive }) => (
+                <>
+                  <img
+                    src={d.src}
+                    alt={d.text}
+                    className={'object-contain' + isActive ? 'scale-125' : ''}
+                  />
+                  <div className="pt-4 text-center text-sm text-grey-text-dark leading-4 font-medium">
+                    {isActive ? d.text : ''}
+                  </div>
+                </>
+              )}
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <p className="text-sm text-grey-p-light font-light leading-6">
