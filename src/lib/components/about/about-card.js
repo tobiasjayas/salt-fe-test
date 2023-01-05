@@ -4,7 +4,7 @@ const AboutCard = (props) => {
       <h1 className="text-blue-title">{props.title}</h1>
       <div className="">
         <h4>{props.subtitle}</h4>
-        <p className="text-sm text-grey-p">{props.content}</p>
+        <p className="text-sm text-grey-p leading-6">{props.content}</p>
       </div>
     </div>
   )

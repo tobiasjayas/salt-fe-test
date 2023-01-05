@@ -8,7 +8,7 @@ import { useState } from 'react'
 import { MdEast, MdWest } from 'react-icons/md'
 
 const About = () => {
-  const [swiper, setSwiper] = useState()
+  const [swiper, setSwiper] = useState();
 
   return (
     <div className="p-8">
@@ -20,7 +20,6 @@ const About = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
         onSwiper={(s) => {
-          console.log('initialize swiper', s)
           setSwiper(s)
         }}
         pagination={{

@@ -13,7 +13,9 @@ module.exports = {
         'blue-text': '#25A0D8',
         'blue-hero': '#4097DB',
         'broken-white': '#F8F8F8',
-        'grey-p': '#777777'
+        'grey-p': '#777777',
+        'grey-p-light': '#A7A7A7',
+        'grey-text-dark': '#303030'
       }
     },
   },
