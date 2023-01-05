@@ -1,8 +1,6 @@
 const Footer = () => {
   return (
-    <div
-      className="footer bg-blue-dark pt-8 lg:pt-14"
-    >
+    <div className="footer bg-blue-dark pt-8 lg:pt-14">
       <div className="container mx-auto px-6">
         <img className="h-11" src="logo-company-white.png" alt="logo-footer" />
         <div className="w-full lg:flex lg:gap-x-9">
@@ -22,13 +20,13 @@ const Footer = () => {
             </div>
           </div>
           <div className="mt-8 flex flex-col gap-y-3 z-10">
-            <a href="/" className="text-white">
+            <a href="#about" className="text-white">
               Who We Are
             </a>
-            <a href="/" className="text-white">
+            <a href="#core" className="text-white">
               Our Values
             </a>
-            <a href="/" className="text-white">
+            <a href="#perks" className="text-white">
               The Perks
             </a>
           </div>

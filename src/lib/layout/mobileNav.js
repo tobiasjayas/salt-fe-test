@@ -5,7 +5,6 @@ import { useMediaQuery } from 'react-responsive'
 const MobileNav = () => {
   const [open, setOpen] = useState(false)
   const isDesktop = useMediaQuery({ query: `(min-width: 1024px)` })
-  console.log(isDesktop)
 
   const handleOpen = () => {
     if (!open) {
@@ -29,26 +28,26 @@ const MobileNav = () => {
       )}
       {open && (
         <div className="bg-white p-4 border border-gray-300 shadow-xl absolute right-3 top-12 flex flex-col gap-y-6">
-          <a href="/" className="">
+          <a onClick={() => {setOpen(false)}} href="#about" className="">
             Who We Are
           </a>
-          <a href="/" className="">
+          <a onClick={() => {setOpen(false)}} href="#core" className="">
             Our Values
           </a>
-          <a href="/" className="">
+          <a onClick={() => {setOpen(false)}} href="#perks" className="">
             The Perks
           </a>
         </div>
       )}
       {isDesktop && (
         <div className="flex gap-x-8">
-          <a href="/" className="">
+          <a href="#about" className="">
             Who We Are
           </a>
-          <a href="/" className="">
+          <a href="#core" className="">
             Our Values
           </a>
-          <a href="/" className="">
+          <a href="#perks" className="">
             The Perks
           </a>
         </div>

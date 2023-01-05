@@ -20,7 +20,7 @@ const CoreValue = () => {
   ]
 
   return (
-    <div className="bg-broken-white pt-14">
+    <div id='core' className="bg-broken-white pt-14">
       <div className="container mx-auto lg:flex lg:items-center">
         <div className="px-6">
           <h1 className="text-blue-title text-center lg:text-start">

@@ -45,7 +45,7 @@ const About = () => {
   }, [isDesktop, data.length])
 
   return (
-    <div className="mt-40 lg:mt-0 p-8 lg:py-12 container mx-auto">
+    <div id='about' className="mt-40 lg:mt-0 p-8 lg:py-12 container mx-auto">
       <Swiper
         breakpoints={{
           1024: {
