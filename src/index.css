@@ -14,10 +14,22 @@ body {
   .mobile-nav {
     height: 80px;
   }
+
+  .footer {
+    min-height: 654px;
+    background-image: url("/public/assets/footer-bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover !important;
+  }
 }
 
 .footer {
   min-height: 654px;
+  background-image: url("/public/assets/footer-bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
 }
 
 h1 {
@@ -59,7 +71,7 @@ h4 {
 .swiper-pagination-bullet {
   width: 8px !important;
   height: 8px !important;
-  background-color: #DAF3FC !important;
+  background-color: #daf3fc !important;
   opacity: 1 !important;
 }
 
@@ -77,4 +89,8 @@ h4 {
     black 30% 70%,
     transparent 100%
   );
+}
+
+a:hover {
+  text-decoration: underline;
 }
